@@ -90,7 +90,7 @@ picture {
 }
 
 .main-paragraph {
-    max-width: 28ch;
+    max-width: 26ch;
     margin-inline: auto;
     padding-block-end: 2rem;
 }
