@@ -1,0 +1,132 @@
+:root {
+    --clr-primary: hsl(0, 0%, 100%); 
+    --clr-neutral-100: hsl(220, 38%, 21%);
+    --clr-neutral-200: hsl(220, 4%, 69%);
+    --bg-color: hsl(212, 43%, 88%);
+
+    --ff-primary: "Outfit", sans-serif;
+    
+    --fw-regular: 400; 
+    --fw-bold: 700; 
+
+    --fs-primary-heading: 1.75rem; 
+    --fs-para: 1.375rem;
+
+    --spacer-size: 1.5rem;
+}
+
+@media (max-width: 37.5em) {
+    :root {
+        --fs-primary-heading: 1.25rem; 
+        --fs-para: 0.8125rem;
+
+        --spacer-size: 1rem;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-rendering: optimizeSpeed;
+    line-height: 1.3;
+    background-color: var(--bg-color);
+    font-family: var(--ff-primary);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 90%;
+    max-height: 22.5rem;
+    margin-inline: auto;
+    display: block;
+    border-radius: 1rem;
+}
+
+/*  General styling */
+.main-content { 
+    width: min(85%, 25rem);
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--spacer-size);
+    background-color: var(--clr-primary);
+    padding-block: 1rem;
+    border-radius: 1rem;
+}
+
+.main-paragraph {
+    max-width: 28ch;
+    margin-inline: auto;
+    padding-block-end: 2rem;
+}
+
+.main-title {
+    max-width: 17ch;
+    margin-inline: auto;
+}
+
+@media (max-width: 37.5em) {
+    .main-paragraph {
+        max-width: 25ch;
+    }
+
+    .main-title {
+        max-width: 18ch;
+    }
+
+    img {
+        max-height: 20rem;
+    }
+
+    .main-content {
+        width: min(85%, 22rem);
+    }
+}
+
+/* Utility classes */ 
+
+.clr-neutral-100 { color: var(--clr-neutral-100); }
+.clr-neutral-200 { color: var(--clr-neutral-200); }
+
+.fw-regular { font-weight: var(--fw-regular); }
+.fw-bold { font-weight: var(--fw-bold); }
+
+.fs-primary-heading { font-size: var(--fs-primary-heading) }; 
+.fs-para { font-size: var(--fs-para); }
+
+.text-center { text-align: center; }
